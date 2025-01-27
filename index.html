@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Market Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Market Tracker</h1>
+    <form id="search-form" class="search-form">
+      <input
+        type="text"
+        id="stock-input"
+        placeholder="Enter stock symbol (e.g., AAPL)"
+        required
+      />
+      <button type="submit" id="search-button">Search</button>
+    </form>
+    <p id="error-message" class="error"></p>
+    <div id="chart-container" class="card hidden">
+      <h2 id="stock-title"></h2>
+      <canvas id="stock-chart"></canvas>
+    </div>
+  </div>
+</body>
+</html>
